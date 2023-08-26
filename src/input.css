@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+    @apply py-2 ps-4 pe-6 rounded-lg  w-[253px] h-[60px] flex items-center justify-center font-semibold
+}
