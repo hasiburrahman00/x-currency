@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Currency </title>
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body class="font-lato">
+
+    <!-- Header section  -->
+    <header class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-white text-2xl font-bold">DoatKolom</a>
+
+            <!-- Navigation Menu -->
+            <nav class="space-x-4">
+                <a href="#" class="text-white">Home</a>
+                <a href="./src/pages/about-us.html" class="text-white">About us </a>
+                <a href="./src/pages/terms_of_servics.html" class="text-white">Terms of Services</a>
+                <a href="./src/pages/contact-us.html" class="text-white">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+
     <!-- Banner section (1.0) -->
     <section class="lg:bg-banner-bg bg-cover py-16 ">
         <div class="container">
@@ -103,7 +123,7 @@
 
     <section class="container bg-[#F8F7FE] px-10 py-16 rounded-3xl my-3 w-11/12 max-w-6xl mx-auto ">
         <!-- heading (2.1) -->
-        <div class="text-center lg:w-[580px] mx-auto lg:mb-14">
+        <div class="text-center max-w-xl mx-auto lg:mb-14">
             <h5 class="text-[#7B68EE] font-bold uppercase mb-4">Specific Price</h5>
             <h2 class="text-3xl md:text-5xl font-extrabold text-[#333] mb-6">Simplify selling and get more revenue.</h2>
             <div class="hidden md:block md:tab">
@@ -114,7 +134,7 @@
         </div>
         <!-- content (2.2) -->
         <div class="flex flex-col-reverse lg:flex-row items-center justify-center ">
-            <div>
+            <div class="mt-7 mb:mt-0">
                 <div class="flex gap-x-4 mb-12">
                     <div class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
@@ -137,7 +157,7 @@
                                 stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div class="pr-[22px]">
+                    <div class="lg:pr-[22px]">
                         <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature One</h4>
                         <p class="text-[#161C24] capitalize ">Lorem ipsum dolor sit amet consectetur. Tortor felis
                             commodo tincidunt purus gravida
@@ -166,7 +186,7 @@
                                 stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div class="pr-[22px]">
+                    <div class="lg:pr-[22px]">
                         <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Two</h4>
                         <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
                             commodo tincidunt purus gravida
@@ -195,7 +215,7 @@
                                 stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <div class="pr-[22px]">
+                    <div class="lg:pr-[22px]">
                         <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Three</h4>
                         <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
                             commodo tincidunt purus gravida
@@ -203,8 +223,8 @@
                     </div>
                 </div>
             </div>
-            <img height="440" width="660" loading="lazy" src="./src/images/specific-price-ss.png"
-                alt="specific price screenshot">
+            <img class="shadow-screenshot rounded-xl lg:max-w-md xl:max-w-full" height="440" width="660" loading="lazy"
+                src="./src/images/specific-price-ss.png" alt="specific price screenshot">
         </div>
     </section>
 
@@ -219,20 +239,20 @@
                     tincidunt purus gravida pellentesque.
                 </p>
             </div>
-            <img width="662" height="440" loading="lazy" src="./src/images/specific-price-ss.png"
-                alt="geo rules customize experiance screenshot">
+            <img class="shadow-screenshot rounded-xl" width="662" height="440" loading="lazy"
+                src="./src/images/specific-price-ss.png" alt="geo rules customize experiance screenshot">
         </div>
     </section>
 
     <!-- unlimited currency (4.0) -->
     <section class="container lg:px-16 py-14 lg:py-16 rounded-3xl bg-[#F3FCF9] w-11/12 max-w-6xl mx-auto mb-6 ">
         <!--section's heading  -->
-        <div class="text-center lg:w-[580px] lg:mx-auto mb-10">
+        <div class="text-center max-w-xl lg:mx-auto mb-10">
             <h5 class="text-[#2BB083] font-bold mb-4 uppercase">Unlimited Currency</h5>
             <h2 class="text-3xl  lg:text-5xl font-extrabold text-[#333]">Configure your shop currency easily</h2>
         </div>
         <!-- section's content -->
-        <div class="flex flex-col-reverse lg:flex-row items-start">
+        <div class="flex flex-col-reverse lg:flex-row lg:items-center xl:items-start ">
             <div class="mt-5">
                 <div class="flex gap-4 py-4 px-6 mb-4 opacity-60 active-tab">
                     <div>
@@ -303,7 +323,8 @@
                     </div>
                 </div>
             </div>
-            <img width="662" height="440" loading="lazy" src="./src/images/frame.png" alt="configure shop screenshot">
+            <img class="lg:max-w-md xl:max-w-full" width="662" height="440" loading="lazy" src="./src/images/frame.png"
+                alt="configure shop screenshot">
         </div>
     </section>
 
@@ -328,13 +349,13 @@
         </div>
 
         <!-- content section(5.2) -->
-        <div class="flex flex-col-reverse lg:flex-row">
-            <div>
+        <div class="flex flex-col-reverse lg:flex-row items-start justify-center">
+            <div class="mt-6 lg:mt-0">
                 <h3 class="text-2xl mb-2 font-extrabold text-[#333]">Something about the template</h3>
                 <p class="text-[#161C24]">Lorem ipsum dolor sit amet consectetur. Tortor felis commodo tincidunt purus
                     gravida pellentesque.</p>
             </div>
-            <img class="mx-auto lg:mx-0" height="440" width="662" loading="lazy"
+            <img class="shadow-screenshot rounded-xl mx-auto lg:mx-0" height="440" width="662" loading="lazy"
                 src="./src/images/specific-price-ss.png" alt="readymade template screenshot">
         </div>
     </section>
@@ -348,8 +369,8 @@
                 felis commodo
                 tincidunt purus gravida pellentesque. </p>
         </div>
-        <img class="mx-auto" height="440" width="662" loading="lazy" src="./src/images/specific-price-ss.png"
-            alt="most powerfull customizer screenshot">
+        <img class="shadow-screenshot rounded-xl mx-auto" height="440" width="662" loading="lazy"
+            src="./src/images/specific-price-ss.png" alt="most powerfull customizer screenshot">
     </section>
 
     <!-- Approximate product price (7.0) -->
@@ -363,8 +384,8 @@
                     commodo
                     tincidunt purus gravida pellentesque.</p>
             </div>
-            <img height="440" width="662" loading="lazy" src="./src/images/specific-price-ss.png"
-                alt="approximate product price screenshot">
+            <img class="shadow-screenshot rounded-xl" height="440" width="662" loading="lazy"
+                src="./src/images/specific-price-ss.png" alt="approximate product price screenshot">
         </div>
     </section>
 
@@ -386,11 +407,82 @@
         </div>
     </section>
 
+    <!-- Testimonial Section -->
+    <section class="bg-banner bg-cover py-24 max-w-6xl mx-auto">
+        <div class="container">
+            <div class="max-w-xl">
+                <h2 class="md:text-5xl font-extrabold mb-8">What <span class="text-primary">Our Customers</span> Say’s
+                    About Us</h2>
+                <h5 class="text-[18px] font-extrabold ps-6 border-l-4 border-primary">Reviews and Testimonials</h5>
+            </div>
+
+            <!-- slider section  -->
+            <div class="relative">
+                <div #swiperRef="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="max-w-xl p-3 md:px-8 md:py-10 rounded-2xl shadow-card">
+                                <p class="text-secondary mb-6">A free WooCommerce multi-currency switcher for WordPress
+                                    sites. With this plugin, you
+                                    can create multiple custom currencies with flags, custom codes, money symbols, extra
+                                    fees, money sign positions, and many more.</p>
+                                <div class="flex gap-4">
+                                    <img class="rounded-full" width="70px" height="70"
+                                        src="./src/images/client-image.png" alt="">
+                                    <div>
+                                        <h3 class="font-semibold">Gavin Park</h3>
+                                        <p class="text-secondary">Product Manager, Poptin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="max-w-xl shadow-card p-3 md:px-8 md:py-10 rounded-2xl">
+                                <p class="text-secondary mb-6">A free WooCommerce multi-currency switcher for WordPress
+                                    sites. With this plugin, you
+                                    can create multiple custom currencies with flags, custom codes, money symbols, extra
+                                    fees, money sign positions, and many more.</p>
+                                <div class="flex gap-4">
+                                    <img class="rounded-full" width="70px" height="70"
+                                        src="./src/images/client-image.png" alt="">
+                                    <div>
+                                        <h3 class="font-semibold">Gavin Park</h3>
+                                        <p class="text-secondary">Product Manager, Poptin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="max-w-xl shadow-card p-3 md:px-8 md:py-10 rounded-2xl">
+                                <p class="text-secondary mb-6">A free WooCommerce multi-currency switcher for WordPress
+                                    sites. With this plugin, you
+                                    can create multiple custom currencies with flags, custom codes, money symbols, extra
+                                    fees, money sign positions, and many more.</p>
+                                <div class="flex gap-4">
+                                    <img class="rounded-full" width="70px" height="70"
+                                        src="./src/images/client-image.png" alt="">
+                                    <div>
+                                        <h3 class="font-semibold">Gavin Park</h3>
+                                        <p class="text-secondary">Product Manager, Poptin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next right-1/3"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Doatkolom community  -->
     <section class="py-16 ">
         <div class="container max-w-6xl mx-auto">
             <div class="flex flex-col-reverse md:flex-row bg-community-bgcolor shadow-community rounded-lg ">
-                <div class="md:p-14 p-6 md:w-7/12 bg-community-bgcolor shadow-community md:rounded-lg">
+                <div
+                    class="md:p-14 p-6 md:w-7/12 bg-community-bgcolor shadow-community md:rounded-lg rounded-b-lg md:rounded-br-none">
                     <h5 class="font-extrabold text-white mb-4 md:mb-6">Looking For Something Exiting?</h5>
                     <h2 class="text-[28px] md:text-5xl font-extrabold text-white mb-6 md:mb-8">Join to our Awesome
                         Community</h2>
@@ -437,6 +529,8 @@
     </section>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>
