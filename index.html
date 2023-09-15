@@ -115,10 +115,10 @@
 
     <!-- specific price section (2) -->
     <!-- For mobile screen -->
-    <div class="space-x-2 md:hidden flex justify-between">
-        <button class="font-bold px-4 py-3 w-[125px] tab-btn active" data-tab="coupons">Coupons</button>
-        <button class="font-bold px-4 py-3 w-[125px] tab-btn" data-tab="product">Product</button>
-        <button class="font-bold px-4 py-3 w-[125px] tab-btn" data-tab="shipping">Shipping</button>
+    <div class="space-x-2 md:hidden flex justify-between tab-box">
+        <button class="font-bold px-4 py-3 w-[125px] tab_btn_sm tab-btn active" data-tab="coupons">Coupons</button>
+        <button class="font-bold px-4 py-3 w-[125px] tab_btn_sm tab-btn" data-tab="product">Product</button>
+        <button class="font-bold px-4 py-3 w-[125px] tab_btn_sm tab-btn" data-tab="shipping">Shipping</button>
     </div>
 
     <section class="container bg-[#F8F7FE] px-10 py-16 rounded-3xl my-3 w-11/12 max-w-6xl mx-auto ">
@@ -127,105 +127,344 @@
             <h5 class="text-[#7B68EE] font-bold uppercase mb-4">Specific Price</h5>
             <h2 class="text-3xl md:text-5xl font-extrabold text-[#333] mb-6">Simplify selling and get more revenue.</h2>
             <div class="hidden md:block md:tab">
-                <button class="font-bold py-3 w-[125px] tab-btn active" data-tab="coupons">Coupons</button>
-                <button class="font-bold py-3 w-[125px] tab-btn" data-tab="product">Product</button>
-                <button class="font-bold py-3 w-[125px] tab-btn" data-tab="shipping">Shipping</button>
+                <button class="font-bold py-3 w-[125px] tab_btn tab-btn active" data-tab="coupons">Coupons</button>
+                <button class="font-bold py-3 w-[125px] tab_btn tab-btn" data-tab="product">Product</button>
+                <button class="font-bold py-3 w-[125px] tab_btn tab-btn" data-tab="shipping">Shipping</button>
             </div>
         </div>
         <!-- content (2.2) -->
-        <div class="flex flex-col-reverse lg:flex-row items-center justify-center ">
-            <div class="mt-7 mb:mt-0">
-                <div class="flex gap-x-4 mb-12">
-                    <div class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
-                            <path
-                                d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+        <div class="tab_content active">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-center ">
+                <div class="mt-7 mb:mt-0">
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature One</h4>
+                            <p class="text-[#161C24] capitalize ">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
                     </div>
-                    <div class="lg:pr-[22px]">
-                        <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature One</h4>
-                        <p class="text-[#161C24] capitalize ">Lorem ipsum dolor sit amet consectetur. Tortor felis
-                            commodo tincidunt purus gravida
-                            pellentesque. </p>
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Two</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Three</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-x-4 mb-12">
-                    <div class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
-                            <path
-                                d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="lg:pr-[22px]">
-                        <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Two</h4>
-                        <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
-                            commodo tincidunt purus gravida
-                            pellentesque. </p>
-                    </div>
-                </div>
-                <div class="flex gap-x-4">
-                    <div class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25" fill="none">
-                            <path
-                                d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
-                                stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="lg:pr-[22px]">
-                        <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Three</h4>
-                        <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
-                            commodo tincidunt purus gravida
-                            pellentesque. </p>
-                    </div>
-                </div>
+                <img class="shadow-screenshot rounded-xl lg:max-w-md xl:max-w-full" height="440" width="660"
+                    loading="lazy" src="./src/images/specific-price-ss.png" alt="specific price screenshot">
             </div>
-            <img class="shadow-screenshot rounded-xl lg:max-w-md xl:max-w-full" height="440" width="660" loading="lazy"
-                src="./src/images/specific-price-ss.png" alt="specific price screenshot">
         </div>
+        <div class="tab_content">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-center ">
+                <div class="mt-7 mb:mt-0">
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature One</h4>
+                            <p class="text-[#161C24] capitalize ">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Two</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Three</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                </div>
+                <img class="shadow-screenshot rounded-xl lg:max-w-md xl:max-w-full" height="440" width="660"
+                    loading="lazy" src="./src/images/specific-price-ss.png" alt="specific price screenshot">
+            </div>
+        </div>
+        <div class="tab_content">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-center ">
+                <div class="mt-7 mb:mt-0">
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature One</h4>
+                            <p class="text-[#161C24] capitalize ">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4 mb-12">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Two</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div
+                            class="bg-white p-3 h-12 w-12 rounded-lg drop-shadow-counter flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 25"
+                                fill="none">
+                                <path
+                                    d="M17.7514 7.10124C17.5114 7.06124 17.2614 7.05125 17.0014 7.05125H7.00141C6.72141 7.05125 6.45141 7.07125 6.19141 7.11125C6.33141 6.83125 6.53141 6.57128 6.77141 6.33128L10.0214 3.07127C11.3914 1.71127 13.6114 1.71127 14.9814 3.07127L16.7314 4.84123C17.3714 5.47123 17.7114 6.27124 17.7514 7.10124Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M9 19.0513C9 19.8013 8.79 20.5113 8.42 21.1113C7.73 22.2713 6.46 23.0513 5 23.0513C3.54 23.0513 2.27 22.2713 1.58 21.1113C1.21 20.5113 1 19.8013 1 19.0513C1 16.8413 2.79 15.0513 5 15.0513C7.21 15.0513 9 16.8413 9 19.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6.49172 19.0308H3.51172" stroke="#7B68EE" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 17.5708V20.5608" stroke="#7B68EE" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.0513V17.0513C22 20.0513 20 22.0513 17 22.0513H7.63C7.94 21.7913 8.21 21.4713 8.42 21.1113C8.79 20.5113 9 19.8013 9 19.0513C9 16.8413 7.21 15.0513 5 15.0513C3.8 15.0513 2.73 15.5813 2 16.4113V12.0513C2 9.33127 3.64 7.43127 6.19 7.11127C6.45 7.07127 6.72 7.05127 7 7.05127H17C17.26 7.05127 17.51 7.06126 17.75 7.10126C20.33 7.40126 22 9.31127 22 12.0513Z"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M22 12.5513H19C17.9 12.5513 17 13.4513 17 14.5513C17 15.6513 17.9 16.5513 19 16.5513H22"
+                                    stroke="#7B68EE" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="lg:pr-[22px]">
+                            <h4 class="text-[#333] text-2xl font-extrabold mb-2">Feature Three</h4>
+                            <p class="text-[#161C24] capitalize">Lorem ipsum dolor sit amet consectetur. Tortor felis
+                                commodo tincidunt purus gravida
+                                pellentesque. </p>
+                        </div>
+                    </div>
+                </div>
+                <img class="shadow-screenshot rounded-xl lg:max-w-md xl:max-w-full" height="440" width="660"
+                    loading="lazy" src="./src/images/specific-price-ss.png" alt="specific price screenshot">
+            </div>
+        </div>
+
+
     </section>
 
     <!-- Geo Rules (3.0) -->
