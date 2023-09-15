@@ -13,6 +13,9 @@ module.exports = {
             }
         },
         extend: {
+            backgroundColor: {
+                'brand': 'var(--Brand, #517DFC)',
+            },
             colors: {
                 primary: '#2E60E1',
                 secondary: '#575757'
@@ -33,7 +36,8 @@ module.exports = {
                 ['btn-bg']: ' linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)',
                 ['banner-bg']: 'url(../src/images/background-img.png)',
                 ['community-bgImg']: 'url(../src/images/doatkolom-community.png)',
-                ['community-bgcolor']: 'linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)'
+                ['community-bgcolor']: 'linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)',
+                ['text-background']: 'linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)'
             },
             fontFamily: {
                 'lato': ['Lato']

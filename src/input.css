@@ -12,8 +12,9 @@
 
 
 .btn {
-    @apply py-2 ps-4 pe-6 rounded-lg h-[60px] flex items-center justify-center font-semibold
+    @apply py-2 ps-4 pe-6 rounded-lg h-[60px] flex items-center justify-center font-semibold transition-opacity duration-200 hover:opacity-95
 }
+
 
 .tab {
     @apply flex
