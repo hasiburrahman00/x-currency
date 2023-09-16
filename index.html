@@ -24,6 +24,7 @@
                 <a href="./src/pages/about-us.html" class="text-white">About us </a>
                 <a href="./src/pages/terms_of_servics.html" class="text-white">Terms of Services</a>
                 <a href="./src/pages/contact-us.html" class="text-white">Contact</a>
+                <a href="./src/pages/doatkolom-site.html" class="text-white">Doatkolom site</a>
             </nav>
         </div>
     </header>
@@ -45,7 +46,7 @@
                     powerful <strong class="text-[#222121]"> WordPress Plugins.</strong>
                 </p>
                 <div class="md:flex space-x-3 justify-center hidden  ">
-                    <a class="btn text-white shadow-btn bg-btn-bg w-[253px]" href="#" aria-level="try free now">Try For
+                    <a class="btn text-white shadow-btn bg-btn-bg w-[253px] " href="#" aria-level="try free now">Try For
                         Free Now</a>
                     <a class="btn bg-white border-[1px] border-primary text-primary w-[253px]" href="#"
                         aria-level="try demo ">Try Demo</a>
@@ -493,7 +494,8 @@
         <!-- section's content -->
         <div class="flex flex-col-reverse lg:flex-row lg:items-center xl:items-start ">
             <div class="mt-5">
-                <div class="flex gap-4 py-4 px-6 mb-4 opacity-60 active-tab">
+
+                <div class="currency-tab active">
                     <div>
                         <div class="h-12 w-12 bg-white drop-shadow-counter flex items-center justify-center rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -562,17 +564,21 @@
                     </div>
                 </div>
             </div>
-            <img class="lg:max-w-md xl:max-w-full" width="662" height="440" loading="lazy" src="./src/images/frame.png"
-                alt="configure shop screenshot">
+            <img class="lg:max-w-md xl:max-w-full currency_content active" width="662" height="440" loading="lazy"
+                src="./src/images/frame.png" alt="configure shop screenshot">
+            <img class="lg:max-w-md xl:max-w-full currency_content" width="662" height="440" loading="lazy"
+                src="./src/images/frame.png" alt="configure shop screenshot">
         </div>
     </section>
 
     <!-- switcher template section ( 5.0) -->
     <!-- mobile screen -->
     <div class="space-x-2 md:hidden flex justify-between mt-6 mb-3">
-        <button class="font-bold py-3 w-[125px] text-xs tab-btn active" data-tab="sticky">Stricky Switcher</button>
-        <button class="font-bold py-3 w-[125px] text-xs tab-btn" data-tab="shortcode">Shortcode</button>
-        <button class="font-bold py-3 w-[125px] text-xs tab-btn" data-tab="responsive">Responsive</button>
+        <button class="font-bold py-3 w-[125px] text-xs switcher_tab_sm tab-btn active" data-tab="sticky">Stricky
+            Switcher</button>
+        <button class="font-bold py-3 w-[125px] text-xs switcher_tab_sm tab-btn" data-tab="shortcode">Shortcode</button>
+        <button class="font-bold py-3 w-[125px] text-xs switcher_tab_sm tab-btn"
+            data-tab="responsive">Responsive</button>
     </div>
     <section class="container bg-[#F8F7FE] rounded-3xl lg:px-10 py-16 mb-6 lg:my-6 w-11/12 max-w-6xl mx-auto">
         <!-- heading section (5.1) -->
@@ -581,21 +587,49 @@
             <h2 class="text-3xl lg:text-5xl font-extrabold text-[#333] mb-6">Start today with our readymade templates
             </h2>
             <div class="hidden md:block md:tab">
-                <button class="font-bold py-3 w-[125px] tab-btn active" data-tab="sticky">Stricky Switcher</button>
-                <button class="font-bold py-3 w-[125px] tab-btn" data-tab="shortcode">Shortcode</button>
-                <button class="font-bold py-3 w-[125px] tab-btn" data-tab="responsive">Responsive</button>
+                <button class="font-bold py-3 w-[125px] switcher_tab tab-btn active" data-tab="sticky">Stricky
+                    Switcher</button>
+                <button class="font-bold py-3 w-[125px] switcher_tab tab-btn" data-tab="shortcode">Shortcode</button>
+                <button class="font-bold py-3 w-[125px] switcher_tab tab-btn" data-tab="responsive">Responsive</button>
             </div>
         </div>
 
         <!-- content section(5.2) -->
-        <div class="flex flex-col-reverse lg:flex-row items-start justify-center">
-            <div class="mt-6 lg:mt-0">
-                <h3 class="text-2xl mb-2 font-extrabold text-[#333]">Something about the template</h3>
-                <p class="text-[#161C24]">Lorem ipsum dolor sit amet consectetur. Tortor felis commodo tincidunt purus
-                    gravida pellentesque.</p>
+        <div class="switcher_content active">
+            <div class="flex flex-col-reverse lg:flex-row items-start justify-center">
+                <div class="mt-6 lg:mt-0">
+                    <h3 class="text-2xl mb-2 font-extrabold text-[#333]">Something about the template</h3>
+                    <p class="text-[#161C24]">Lorem ipsum dolor sit amet consectetur. Tortor felis commodo tincidunt
+                        purus
+                        gravida pellentesque.</p>
+                </div>
+                <img class="shadow-screenshot rounded-xl mx-auto lg:mx-0" height="440" width="662" loading="lazy"
+                    src="./src/images/specific-price-ss.png" alt="readymade template screenshot">
             </div>
-            <img class="shadow-screenshot rounded-xl mx-auto lg:mx-0" height="440" width="662" loading="lazy"
-                src="./src/images/specific-price-ss.png" alt="readymade template screenshot">
+        </div>
+        <div class="switcher_content">
+            <div class="flex flex-col-reverse lg:flex-row items-start justify-center">
+                <div class="mt-6 lg:mt-0">
+                    <h3 class="text-2xl mb-2 font-extrabold text-[#333]">Something about the template</h3>
+                    <p class="text-[#161C24]">Lorem ipsum dolor sit amet consectetur. Tortor felis commodo tincidunt
+                        purus
+                        gravida pellentesque.</p>
+                </div>
+                <img class="shadow-screenshot rounded-xl mx-auto lg:mx-0" height="440" width="662" loading="lazy"
+                    src="./src/images/specific-price-ss.png" alt="readymade template screenshot">
+            </div>
+        </div>
+        <div class="switcher_content">
+            <div class="flex flex-col-reverse lg:flex-row items-start justify-center">
+                <div class="mt-6 lg:mt-0">
+                    <h3 class="text-2xl mb-2 font-extrabold text-[#333]">Something about the template</h3>
+                    <p class="text-[#161C24]">Lorem ipsum dolor sit amet consectetur. Tortor felis commodo tincidunt
+                        purus
+                        gravida pellentesque.</p>
+                </div>
+                <img class="shadow-screenshot rounded-xl mx-auto lg:mx-0" height="440" width="662" loading="lazy"
+                    src="./src/images/specific-price-ss.png" alt="readymade template screenshot">
+            </div>
         </div>
     </section>
 
@@ -649,8 +683,8 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="bg-banner bg-cover py-24 max-w-6xl mx-auto">
-        <div class="container">
+    <section class="bg-banner bg-cover py-24  mx-auto">
+        <div class="container max-w-[1600px]">
             <div class="max-w-xl">
                 <h2 class="md:text-5xl font-extrabold mb-8">What <span class="text-primary">Our Customers</span> Say’s
                     About Us</h2>
@@ -709,9 +743,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="max-w-xl shadow-card p-3 md:px-8 md:py-10 rounded-2xl">
+                                <p class="text-secondary mb-6">A free WooCommerce multi-currency switcher for WordPress
+                                    sites. With this plugin, you
+                                    can create multiple custom currencies with flags, custom codes, money symbols, extra
+                                    fees, money sign positions, and many more.</p>
+                                <div class="flex gap-4">
+                                    <img class="rounded-full" width="70px" height="70"
+                                        src="./src/images/client-image.png" alt="">
+                                    <div>
+                                        <h3 class="font-semibold">Gavin Park</h3>
+                                        <p class="text-secondary">Product Manager, Poptin</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-button-next right-1/3"></div>
-                    <div class="swiper-button-prev"></div>
+                    <svg class="swiper-button-next" xmlns="http://www.w3.org/2000/svg" width="73" height="73"
+                        viewBox="0 0 73 73" fill="none">
+                        <path
+                            d="M6.08365 36.5002C6.08365 53.2988 19.7017 66.9168 36.5003 66.9168C53.299 66.9168 66.917 53.2988 66.917 36.5002C66.917 19.7015 53.299 6.0835 36.5003 6.08349C19.7017 6.08349 6.08366 19.7015 6.08365 36.5002Z"
+                            stroke="#0082FF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M32.6664 25.7637L43.373 36.5008L32.6664 47.2378" stroke="#0082FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="swiper-button-prev" xmlns="http://www.w3.org/2000/svg" width="73" height="73"
+                        viewBox="0 0 73 73" fill="none">
+                        <path
+                            d="M66.9163 36.5002C66.9163 53.2988 53.2983 66.9168 36.4997 66.9168C19.701 66.9168 6.08301 53.2988 6.08301 36.5002C6.08301 19.7015 19.701 6.0835 36.4997 6.08349C53.2983 6.08349 66.9163 19.7015 66.9163 36.5002Z"
+                            stroke="#0082FF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M40.3336 25.7637L29.627 36.5008L40.3336 47.2378" stroke="#0082FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                 </div>
             </div>
         </div>

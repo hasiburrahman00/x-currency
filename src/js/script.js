@@ -3,16 +3,15 @@ var swiper = new Swiper(".mySwiper", {
     breakpoints: {
         // when window width is >= 320px
         640: {
-            slidesPerView: 1.30,
+            slidesPerView: 2,
         },
-        // when window width is >= 480px
-        1024: {
-            slidesPerView: 1.60,
-        },
-        // when window width is >= 640px
         1280: {
-            slidesPerView: 2.17,
+            slidesPerView: 3,
+        },
+        1600: {
+            slidesPerView: 3,
         }
+
     },
     spaceBetween: 30,
     pagination: {
@@ -69,12 +68,17 @@ var prependNumber = 1;
 const tabs = document.querySelectorAll('.tab_btn');
 const tab_contents = document.querySelectorAll('.tab_content')
 const tabs_sm = document.querySelectorAll('.tab_btn_sm');
+const switcher_tabs = document.querySelectorAll('.switcher_tab');
+const switcher_tabs_sm = document.querySelectorAll('.switcher_tab_sm');
+const switcher_content = document.querySelectorAll('.switcher_content')
+const currency_tabs = document.querySelectorAll('.currency-tab')
+const currency_content = document.querySelectorAll('.currency_content');
+
 
 
 // tabs for desktop/tablet screen -> specefic price section 
 tabs.forEach((tab, index) => {
 
-    console.log(index)
     tab.addEventListener('click', () => {
 
         tabs.forEach((tab) => {
@@ -84,7 +88,6 @@ tabs.forEach((tab, index) => {
 
         tab_contents.forEach((content) => {
             content.classList.remove('active')
-            console.log(content)
         })
         tab_contents[index].classList.add('active')
 
@@ -103,10 +106,65 @@ tabs_sm.forEach((tab, index) => {
 
         tab_contents.forEach((content) => {
             content.classList.remove('active')
-            console.log(content)
         })
         tab_contents[index].classList.add('active')
 
     })
 })
 
+// readymade switcher tamplate: 
+switcher_tabs.forEach((tab, index) => {
+
+    console.log(index)
+    tab.addEventListener('click', () => {
+
+        switcher_tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        })
+        tab.classList.add('active');
+
+        switcher_content.forEach((content) => {
+            content.classList.remove('active')
+        })
+        switcher_content[index].classList.add('active')
+
+    })
+})
+
+// readymade switcher tamplate for mobile : 
+switcher_tabs_sm.forEach((tab, index) => {
+
+    console.log(index)
+    tab.addEventListener('click', () => {
+
+        switcher_tabs_sm.forEach((tab) => {
+            tab.classList.remove('active');
+        })
+        tab.classList.add('active');
+
+        switcher_content.forEach((content) => {
+            content.classList.remove('active')
+        })
+        switcher_content[index].classList.add('active')
+
+    })
+})
+
+// unlimited currency section tabs 
+currency_tabs.forEach((tab, index) => {
+
+    console.log(index)
+    tab.addEventListener('click', () => {
+
+        currency_tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        })
+        tab.classList.add('active');
+
+        currency_content.forEach((content) => {
+            content.classList.remove('active')
+        })
+        currency_content[index].classList.add('active')
+
+    })
+})

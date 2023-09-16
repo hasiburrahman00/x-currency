@@ -5,9 +5,11 @@
 
 .swiper {
     width: 100%;
-    height: 360px;
+    height: 400px;
+    padding: 0 20px;
     margin: 20px auto;
 }
+
 
 .append-buttons {
     text-align: center;
@@ -29,34 +31,63 @@
 .swiper-button-prev {
     position: absolute;
     top: 90%;
-    left: 46%;
+    left: 40%;
 }
 
 .swiper-button-next {
     position: absolute;
     top: 90%;
-    right: 46%;
+    right: 40%;
 }
 
 
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 767px) {
     .swiper-button-prev {
-        left: 40%;
+        left: 45%;
     }
 
     .swiper-button-next {
-        right: 40%;
+        right: 45%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .swiper-button-prev {
+        left: 47%;
+    }
+
+    .swiper-button-next {
+        right: 47%;
     }
 }
 
 /*----------------------------- 
     tabs section content styles
 --------------------------------*/
-.tab_content {
+.tab_content, 
+.switcher_content,
+.currency_content {
     display: none;
+    animation: moving .7s ease;
 }
 
-.tab_content.active {
+
+
+.tab_content.active,
+.switcher_content.active,
+.currency_content.active {
     display: block;
+}
+
+
+
+@keyframes moving {
+    from{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

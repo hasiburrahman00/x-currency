@@ -33,6 +33,7 @@ module.exports = {
                 'counter': '0px 8px 24px rgba(0, 0, 0, 0.08)'
             },
             backgroundImage: {
+                ['banner']: 'url(../src/images/background_img.png)',
                 ['btn-bg']: ' linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)',
                 ['banner-bg']: 'url(../src/images/background-img.png)',
                 ['community-bgImg']: 'url(../src/images/doatkolom-community.png)',
