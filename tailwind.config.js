@@ -9,7 +9,7 @@ module.exports = {
                 sm: '575px',
                 md: '768px',
                 lg: '991px',
-                xl: '1280px'
+                xl: '1280px',
             }
         },
         extend: {
@@ -41,7 +41,7 @@ module.exports = {
                 ['text-background']: 'linear-gradient(180deg, #517DFC 0%, #0A42C6 100%)'
             },
             fontFamily: {
-                'lato': ['Lato']
+                'primary': ['Lato', 'sans-serif'],
             }
 
         },

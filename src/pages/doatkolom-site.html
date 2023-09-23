@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="font-lato">
+<body class="font-primary">
 
     <!-- Header section  -->
     <header class="bg-blue-500 p-4">
@@ -32,8 +32,8 @@
     <!-- banner section  -->
     <section class="bg-banner bg-cover">
         <div class="container max-w-6xl mx-auto flex py-16 lg:py-44 flex-col-reverse lg:flex-row lg:space-x-8">
-            <div class="lg:max-w-[480px]">
-                <img class="mb-6" src="../images/we-make-it-happend.png" alt="we make it happen" loading="lazy">
+            <div class="lg:max-w-[516px]">
+                <h4 class="uppercase font-extrabold"><span class="text-3xl">👋</span>We make it happen</h4>
                 <h1
                     class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-8 lg:leading-[76px] md:leading-[57px]">
                     Find the <span class="text-primary">Perfect Plugin</span> for Your Next Website</h1>
@@ -46,8 +46,12 @@
                     loading="lazy">
             </div>
             <div class="">
-                <img class="md:w-2/3 mx-auto lg:w-full" width="735" height="551" src="../images/banner_img.png"
-                    alt="doatkolom banner image" loading="lazy">
+                <picture class="md:w-2/3 mx-auto lg:w-full">
+                    <source media="(max-width:640px)" srcset="../images/banner-mobile.webp">
+                    <img height="551" width="735" loading="lazy" class="rounded-lg" src="../images/banner.webp"
+                        alt="doatkolom banner image">
+                </picture>
+               
             </div>
         </div>
     </section>
