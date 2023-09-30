@@ -30,7 +30,7 @@
 }
 
 .currency-tab {
-    @apply flex border border-transparent gap-4 py-4 px-6 opacity-60;
+    @apply flex border border-transparent gap-4 py-4 px-3 md:px-6 opacity-60;
 }
 
 .currency-tab.active {
